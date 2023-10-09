@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 // type HeaderProps = {};
 
@@ -31,9 +32,9 @@ const Header = () => {
             </button>
           </nav>
 
-          <button className="px-10 py-5 bg-[#FF4F00] text-white drop-shadow-lg">
+          <Button className="px-10 py-5 bg-[#FF4F00] text-white drop-shadow-lg">
             Book Now
-          </button>
+          </Button>
         </div>
       </div>
     </header>
