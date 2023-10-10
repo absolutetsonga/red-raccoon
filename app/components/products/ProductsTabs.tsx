@@ -3,12 +3,19 @@
 import Image from "next/image";
 import { useState } from "react";
 
+type Product = {
+  title: string;
+  active: boolean;
+};
+
 type ProductsTabsElementProps = {
-  product: {
-    title: string;
-    active: boolean;
-  };
+  product: Product;
   onClick: () => void;
+};
+
+type ProductsTabsProps = {
+  productTabs: Product[];
+  setProductTabs: React.Dispatch<React.SetStateAction<Product[]>>;
 };
 
 const ProductsTabsElement = ({
@@ -50,16 +57,7 @@ const ProductsTabsElement = ({
   );
 };
 
-const ProductsTabs = () => {
-  const [productTabs, setProductTabs] = useState([
-    { title: "PVC Retractble", active: false },
-    { title: "Zip Screen", active: false },
-    { title: "Pergo Lux", active: false },
-    { title: "Prgo Lite", active: false },
-    { title: "Pergo Canopy", active: false },
-    { title: "Prgo Carpot", active: false },
-  ]);
-
+const ProductsTabs = ({ productTabs, setProductTabs }: ProductsTabsProps) => {
   const handleClick = (clickedProductIndex: number) => {
     const updatedProductTabs = productTabs.map((product, index) => ({
       ...product,

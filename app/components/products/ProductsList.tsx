@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "../Button";
 
-type ProductListElement = {
+type ProductListElementProps = {
   product: {
     imageSrc: string;
     size: string;
@@ -10,7 +10,11 @@ type ProductListElement = {
   };
 };
 
-const ProductListElement = ({ product }: ProductListElement) => {
+type ProductsProps = {
+  activeTab: string;
+};
+
+const ProductListElement = ({ product }: ProductListElementProps) => {
   return (
     <div className="flex flex-col justify-center gap-5 bg-white p-6 rounded-md">
       <Image
@@ -51,31 +55,155 @@ const ProductListElement = ({ product }: ProductListElement) => {
   );
 };
 
-const ProductsList = () => {
-  const listElements = [
+const ProductsList = ({ activeTab }: ProductsProps) => {
+  const categories = [
     {
-      imageSrc: "/products/product-1.jpg",
-      size: "1000×400×230",
-      weight: "22",
-      price: "39900",
+      category: "PVC Retractble",
+      products: [
+        {
+          imageSrc: "/products/product-1.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-2.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-3.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+      ],
     },
     {
-      imageSrc: "/products/product-2.jpg",
-      size: "1000×400×230",
-      weight: "22",
-      price: "39900",
+      category: "Zip Screen",
+      products: [
+        {
+          imageSrc: "/products/product-1.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-2.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-3.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+      ],
     },
     {
-      imageSrc: "/products/product-3.jpg",
-      size: "1000×400×230",
-      weight: "22",
-      price: "39900",
+      category: "Pergo Lux",
+      products: [
+        {
+          imageSrc: "/products/product-1.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-2.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-3.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+      ],
+    },
+    {
+      category: "Prgo Lite",
+      products: [
+        {
+          imageSrc: "/products/product-1.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-2.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-3.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+      ],
+    },
+    {
+      category: "Pergo Canopy",
+      products: [
+        {
+          imageSrc: "/products/product-1.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-2.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-3.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+      ],
+    },
+    {
+      category: "Prgo Carpot",
+      products: [
+        {
+          imageSrc: "/products/product-1.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-2.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+        {
+          imageSrc: "/products/product-3.jpg",
+          size: "1000×400×230",
+          weight: "22",
+          price: "39900",
+        },
+      ],
     },
   ];
 
+  const selectedCategory = categories.find(el => el.category === activeTab);
+
+  console.log(selectedCategory);
+
   return (
     <section className="flex flex-col lg:flex-row items-center justify-center mt-10 gap-10">
-      {listElements.map((product, index) => (
+      {selectedCategory?.products.map((product, index) => (
         <ProductListElement product={product} key={index} />
       ))}
     </section>

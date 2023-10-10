@@ -1,10 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import ProductsTabs from "./products/ProductsTabs";
 import ProductsList from "./products/ProductsList";
 
+import { useState } from "react";
+
 // type ProductsProps = {};
 
 const Products = () => {
+  const [productTabs, setProductTabs] = useState([
+    { title: "PVC Retractble", active: false },
+    { title: "Zip Screen", active: false },
+    { title: "Pergo Lux", active: false },
+    { title: "Prgo Lite", active: false },
+    { title: "Pergo Canopy", active: false },
+    { title: "Prgo Carpot", active: false },
+  ]);
+
+  const activeTab = productTabs.find((tab) => tab.active === true);
+
   return (
     <section className="flex flex-col w-full min-h-screen">
       <Image
@@ -23,8 +38,13 @@ const Products = () => {
           <p className="text-[19px] leading-[188%]">in stock for 30.09.2023</p>
         </div>
 
-        <ProductsTabs />
-        <ProductsList />
+        <ProductsTabs
+          productTabs={productTabs}
+          setProductTabs={setProductTabs}
+        />
+        <ProductsList
+          activeTab={activeTab ? activeTab.title : "PVC Retractble"}
+        />
       </div>
     </section>
   );
