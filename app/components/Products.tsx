@@ -14,7 +14,7 @@ const Products = () => {
         className="w-full min-h-screen absolute top-[90vh] left-0 right-0 bottom-0 -z-10 object-cover"
       />
 
-      <div className="w-full flex flex-col">
+      <div className="w-full flex flex-col gap-5">
         <div className="flex flex-col item-center justify-center text-center text-white">
           <h2 className="font-extralight text-[44px] leading-[188%]">
             Our <span className="font-black">Products</span>
