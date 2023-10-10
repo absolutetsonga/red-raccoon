@@ -1,13 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Button from "../Button";
+import { useState } from "react";
+import { categories } from "@/app/utils/constants";
+import ModalProduct from "./ModalProduct";
+import { IProduct } from "@/app/utils/types";
 
 type ProductListElementProps = {
-  product: {
-    imageSrc: string;
-    size: string;
-    weight: string;
-    price: string;
-  };
+  product: IProduct
 };
 
 type ProductsProps = {
@@ -15,8 +16,10 @@ type ProductsProps = {
 };
 
 const ProductListElement = ({ product }: ProductListElementProps) => {
+  const [toggle, setToggle] = useState<boolean>(false);
+
   return (
-    <div className="flex flex-col justify-center gap-5 bg-white p-6 rounded-md">
+    <div className="relative flex flex-col justify-center gap-5 bg-white p-6 rounded-md">
       <Image
         src={product.imageSrc}
         width={295}
@@ -47,159 +50,21 @@ const ProductListElement = ({ product }: ProductListElementProps) => {
           </p>
         </div>
 
-        <Button className="px-[23px] py-[13px] bg-[#E2E8ED] hover:bg-[#FF4F00] hover:text-white transition-all text-[11px] rounded-md">
+        <Button
+          className="px-[23px] py-[13px] bg-[#E2E8ED] hover:bg-[#FF4F00] hover:text-white transition-all text-[11px] rounded-md"
+          onClick={() => setToggle(true)}
+        >
           More about
         </Button>
       </div>
+
+      {toggle && <ModalProduct product={product} />}
     </div>
   );
 };
 
 const ProductsList = ({ activeTab }: ProductsProps) => {
-  const categories = [
-    {
-      category: "PVC Retractble",
-      products: [
-        {
-          imageSrc: "/products/product-1.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-2.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-3.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-      ],
-    },
-    {
-      category: "Zip Screen",
-      products: [
-        {
-          imageSrc: "/products/product-1.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-2.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-3.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-      ],
-    },
-    {
-      category: "Pergo Lux",
-      products: [
-        {
-          imageSrc: "/products/product-1.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-2.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-3.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-      ],
-    },
-    {
-      category: "Prgo Lite",
-      products: [
-        {
-          imageSrc: "/products/product-1.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-2.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-3.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-      ],
-    },
-    {
-      category: "Pergo Canopy",
-      products: [
-        {
-          imageSrc: "/products/product-1.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-2.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-3.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-      ],
-    },
-    {
-      category: "Prgo Carpot",
-      products: [
-        {
-          imageSrc: "/products/product-1.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-2.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-        {
-          imageSrc: "/products/product-3.jpg",
-          size: "1000×400×230",
-          weight: "22",
-          price: "39900",
-        },
-      ],
-    },
-  ];
-
-  const selectedCategory = categories.find(el => el.category === activeTab);
-
-  console.log(selectedCategory);
+  const selectedCategory = categories.find((el) => el.category === activeTab);
 
   return (
     <section className="flex flex-col lg:flex-row items-center justify-center mt-10 gap-10">
