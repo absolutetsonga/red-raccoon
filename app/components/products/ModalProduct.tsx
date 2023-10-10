@@ -1,13 +1,13 @@
-import React from "react";
 import { IProduct } from "@/app/utils/types";
 import Image from "next/image";
 import Link from "next/link";
 
 type ModalProductProps = {
   product: IProduct;
+  setToggle: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const ModalProduct = ({ product }: ModalProductProps) => {
+const ModalProduct = ({ product, setToggle }: ModalProductProps) => {
   return (
     <section className="absolute w-[709px] h-[509px] flex flex-row gap-10 p-10 z-10 text-[#313337] bg-white">
       <div className="flex flex-col gap-6 w-1/2">
@@ -71,6 +71,15 @@ const ModalProduct = ({ product }: ModalProductProps) => {
           </div>
         </div>
       </div>
+
+      <Image
+        src={"/products/close-button.svg"}
+        alt=""
+        width={28}
+        height={28}
+        className="absolute top-6 right-6"
+        onClick={() => setToggle(false)}
+      />
     </section>
   );
 };

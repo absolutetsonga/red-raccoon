@@ -58,7 +58,7 @@ const ProductListElement = ({ product }: ProductListElementProps) => {
         </Button>
       </div>
 
-      {toggle && <ModalProduct product={product} />}
+      {toggle && <ModalProduct product={product} setToggle={setToggle}/>}
     </div>
   );
 };
