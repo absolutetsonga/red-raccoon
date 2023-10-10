@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 type ProductsTabsElementProps = {
   product: {
@@ -31,7 +31,7 @@ const ProductsTabsElement = ({
         src="/products/decor-focus.svg"
         width={80}
         height={80}
-        className={`absolute w-14 h-14 object-cover bottom-[-54px] transition-opacity ${
+        className={`absolute w-10 h-10 object-cover bottom-[-38.5px] transition-opacity ${
           product.active ? "opacity-100" : "opacity-0"
         }`}
         alt="product-active"
@@ -41,7 +41,7 @@ const ProductsTabsElement = ({
         src="/products/decor-focus.svg"
         width={80}
         height={80}
-        className={`absolute w-14 h-14 object-cover bottom-[-80px] transition-opacity ${
+        className={`absolute w-10 h-10 object-cover bottom-[-68px] transition-opacity ${
           product.active ? "opacity-100" : "opacity-0"
         }`}
         alt="product-active"
