@@ -14,7 +14,7 @@ export default function Home() {
 
       <Hero />
       
-      <main className="flex min-h-screen flex-col items-center justify-between max-w-[1140px]">
+      <main className="flex min-h-screen flex-col items-center justify-between w-[1140px]">
         <Products />
         <About />
         <Testimonials />

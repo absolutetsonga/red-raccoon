@@ -7,13 +7,14 @@ import Button from "./Button";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 w-full flex justify-center h-[70px] lg:h-[100px] bg-white gap-20">
+    <header className="fixed top-0 left-0 right-0 w-full flex justify-center h-[70px] lg:h-[100px] bg-white gap-20 z-30">
       <div className="flex flex-row items-center justify-between w-[900px] h-full">
         <Image
           src="/nav/logo.svg"
           alt="Red Racoon Logo"
           width={71}
           height={71}
+          className="object-cover"
         />
 
         <div className="flex flex-row items-center justify-center gap-[100px]">
