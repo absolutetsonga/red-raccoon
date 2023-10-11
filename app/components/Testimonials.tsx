@@ -30,7 +30,7 @@ const Testimonials = () => {
         </div>
 
         <div
-          className={`relative flex flex-row items-center justify-center ${inter.className} gap-[30px]`}
+          className={`w-full relative flex flex-col md:flex-row items-center justify-center ${inter.className} gap-[30px]`}
         >
           <Image
             src="/testimonials/decor-quote.svg"
@@ -43,7 +43,7 @@ const Testimonials = () => {
           {activeReviews?.reviews.map((el) => {
             return (
               <div
-                className="flex flex-col items-center justify-center bg-white px-10 py-8 gap-6 rounded-xl"
+                className="w-full flex flex-col items-center justify-center bg-white md:px-10 py-8 gap-6 rounded-xl"
                 key={el.author}
               >
                 <p className="max-w-[200px] text-center">{el.title}</p>
@@ -68,20 +68,20 @@ const Testimonials = () => {
           <div className="absolute bottom-[-40px] flex flex-row gap-1.5">
             <button
               className={`${
-                active === 0 ? "w-8 bg-orange-600" : ""
-              } w-5 h-3 bg-orange-800 rounded-full`}
+                active === 0 ? "w-8 bg-orange-600" : "w-5 bg-orange-800"
+              } h-3 rounded-full`}
               onClick={() => setActive(0)}
             />
             <button
               className={`${
-                active === 1 ? "w-8 bg-orange-600" : ""
-              } w-5 h-3 bg-orange-800 rounded-full`}
+                active === 1 ? "w-8 bg-orange-600" : "w-5 bg-orange-800"
+              } h-3 rounded-full`}
               onClick={() => setActive(1)}
             />
             <button
               className={`${
-                active === 2 ? "w-8 bg-orange-600" : ""
-              } w-5 h-3 bg-orange-800 rounded-full`}
+                active === 2 ? "w-8 bg-orange-600" : "w-5 bg-orange-800"
+              } h-3 rounded-full`}
               onClick={() => setActive(2)}
             />
           </div>

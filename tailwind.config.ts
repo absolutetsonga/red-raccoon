@@ -13,7 +13,8 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         about: "url('/about/background-about-2.svg')",
-        general: "url('/about/background-general.svg')",
+        general: "url('/background-general.svg')",
+        footer: "url('/footer/background-footer.svg')"
       },
     },
   },
