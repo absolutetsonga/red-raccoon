@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <section className="relative flex justify-center w-full bg-about bg-no-repeat bg-cover p-10">
-      <div className="flex flex-col items-center md:items-baseline justify-center md:justify-normal sm:py-[130px] max-w-[1140px] min-h-screen text-white gap-10 z-10">
+      <div className="flex flex-col items-center md:items-baseline justify-center md:justify-normal sm:py-[130px] max-w-[1140px] text-white gap-10 z-10">
         <div className="flex flex-col gap-1">
           <h4 className="text-[34px] font-extralight leading-[188%]">
             About <span className="font-bold">Us</span>

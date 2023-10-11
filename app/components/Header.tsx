@@ -18,7 +18,7 @@ const Header = () => {
           alt="Red Racoon Logo"
           width={71}
           height={71}
-          className="object-cover w-[60px] h-[60px] sm:max-w-[71px] sm:max-h-[71px]"
+          className="object-cover w-[60px] h-[60px] sm:w-[71px] sm:h-[71px]"
         />
 
         <div className="flex flex-row items-center justify-center gap-4 md:gap-[100px]">
