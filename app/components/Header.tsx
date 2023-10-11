@@ -44,7 +44,21 @@ const Header = () => {
           </Button>
 
           <div className="block sm:hidden" onClick={() => setToggle(!toggle)}>
-            {toggle ? "ClOSE MENU" : "OPEN MENU"}
+            {toggle ? (
+              <Image
+                src="/nav/xmark-solid.svg"
+                width={30}
+                height={30}
+                alt="Close Menu"
+              />
+            ) : (
+              <Image
+                src="/nav/bars-solid.svg"
+                width={30}
+                height={30}
+                alt="Open Menu"
+              />
+            )}
           </div>
 
           <div

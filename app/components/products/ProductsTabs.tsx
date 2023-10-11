@@ -65,7 +65,7 @@ const ProductsTabs = ({ productTabs, setProductTabs }: ProductsTabsProps) => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-center lg:justify-between font-bold w-full flex-wrap gap-4">
+    <div className="flex flex-row items-center justify-center font-bold w-full flex-wrap gap-4">
       {productTabs.map((product, index) => (
         <ProductsTabsElement
           key={index}

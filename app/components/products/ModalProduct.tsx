@@ -10,8 +10,8 @@ type ModalProductProps = {
 
 const ModalProduct = ({ product, setToggle }: ModalProductProps) => {
   return (
-    <section className="inset-center w-[1000px] h-[609px] flex flex-row gap-10 p-10 pb-16 z-10 text-[#313337] bg-white">
-      <div className="flex flex-col gap-6 w-1/2">
+    <section className="inset-center lg:w-[1000px] lg:h-[609px] flex flex-col lg:flex-row gap-10 mx-10 p-4 lg:p-10 pb-6 lg:pb-16 z-10 text-[#313337] bg-white">
+      <div className="flex flex-col gap-6 lg:w-1/2">
         <Image
           src={product.imageSrc}
           alt=""
@@ -44,11 +44,11 @@ const ModalProduct = ({ product, setToggle }: ModalProductProps) => {
         </p>
       </div>
 
-      <div className="flex flex-col w-1/2">
+      <div className="flex flex-col lg:w-1/2">
         <h3 className="text-[22.57px] font-extralight">{product.name}</h3>
 
-        <div className="flex flex-col gap-9">
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4 lg:gap-9">
+          <div className="flex-col gap-2 hidden lg:flex">
             <h5 className="font-bold text-[14px]"> Description: </h5>
             <p className="text-[14px] leading-[13.8px]">
               {product.description}
@@ -89,7 +89,7 @@ const ModalProduct = ({ product, setToggle }: ModalProductProps) => {
             </div>
           </div>
 
-          <div className="inline-flex justify-end pt-10">
+          <div className="inline-flex justify-end pt-4">
             <Button className="px-20 py-4 bg-gradient-to-r from-[#ec4c14] via-[#ec6214] to-[#ec6f35] rounded-lg text-white font-bold">
               Buy in 1 click
             </Button>
