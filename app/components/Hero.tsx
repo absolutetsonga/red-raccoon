@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="flex items-center justify-end w-full min-h-screen pt-[68px] pr-[70px]">
       <Image
-        src="/hero/background-hero.png"
+        src="/hero/background-hero.svg"
         alt=""
         width={1408}
         height={700}

@@ -6,6 +6,7 @@ import ProductsList from "./products/ProductsList";
 
 import { useState } from "react";
 import Button from "./Button";
+import Link from "next/link";
 
 // type ProductsProps = {};
 
@@ -22,7 +23,7 @@ const Products = () => {
   const activeTab = productTabs.find((tab) => tab.active === true);
 
   return (
-    <section className="flex flex-col w-full items-center justify-center min-h-screen">
+    <section className="flex flex-col w-full items-center justify-start min-h-screen">
       <Image
         src="/background-general.svg"
         alt=""
@@ -47,10 +48,12 @@ const Products = () => {
           activeTab={activeTab ? activeTab.title : "PVC Retractble"}
         />
 
-        <div className="inline-flex justify-center">
-          <Button className="px-20 py-4 bg-gradient-to-r from-[#ec4c14] via-[#ec6214] to-[#ec6f35] text-white font-bold shadow-lg shadow-[#a14f29]">
-            View All Products
-          </Button>
+        <div className="inline-flex justify-center pt-10">
+          <Link href="/products">
+            <Button className="px-20 py-4 bg-gradient-to-r from-[#ec4c14] via-[#ec6214] to-[#ec6f35] text-white font-bold shadow-lg shadow-[#a14f29]">
+              View All Products
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
