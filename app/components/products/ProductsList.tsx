@@ -8,7 +8,7 @@ import ModalProduct from "./ModalProduct";
 import { IProduct } from "@/app/utils/types";
 
 type ProductListElementProps = {
-  product: IProduct
+  product: IProduct;
 };
 
 type ProductsProps = {
@@ -19,13 +19,13 @@ const ProductListElement = ({ product }: ProductListElementProps) => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <div className="relative flex flex-col justify-center gap-5 bg-white p-6 rounded-md">
+    <div className="relative w-[80%] md:w-auto flex flex-col justify-center gap-5 bg-white p-6 rounded-md">
       <Image
         src={product.imageSrc}
         width={295}
         height={220}
         alt={"Product Image"}
-        className="object-cover"
+        className="object-cover w-full md:max-w-[295px] max-h-[220px]"
       />
 
       <div className="flex flex-col gap-3">

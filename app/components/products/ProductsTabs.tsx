@@ -22,7 +22,7 @@ const ProductsTabsElement = ({
   return (
     <button className="relative flex flex-col items-center" onClick={onClick}>
       <div
-        className={`bg-white h-16 text-black rounded-md px-10 py-4 hover:bg-gradient-to-r hover:from-[#ec4c14] hover:via-[#ec6214] hover:to-[#ec6f35] hover:text-white font-bold transition-colors ${
+        className={`flex items-center justify-center bg-white h-16 text-black rounded-md w-[150px] hover:bg-gradient-to-r hover:from-[#ec4c14] hover:via-[#ec6214] hover:to-[#ec6f35] hover:text-white font-bold transition-colors ${
           product.active
             ? "bg-gradient-to-r from-[#ec4c14] via-[#ec6214] to-[#ec6f35] text-white"
             : ""
@@ -65,7 +65,7 @@ const ProductsTabs = ({ productTabs, setProductTabs }: ProductsTabsProps) => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between font-bold w-full">
+    <div className="flex flex-row items-center justify-center lg:justify-between font-bold w-full flex-wrap gap-4">
       {productTabs.map((product, index) => (
         <ProductsTabsElement
           key={index}

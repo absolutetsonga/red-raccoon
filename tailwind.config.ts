@@ -12,6 +12,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        about: "url('/about/background-about-2.svg')",
+        general: "url('/about/background-general.svg')",
       },
     },
   },

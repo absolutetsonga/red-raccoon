@@ -13,13 +13,9 @@ export default function Home() {
       <Header />
 
       <Hero />
-      
-      <main className="flex min-h-screen flex-col items-center justify-between w-[1140px]">
-        <Products />
-        <About />
-        <Testimonials />
-      </main>
-
+      <Products />
+      <About />
+      <Testimonials />
       <Footer />
     </div>
   );

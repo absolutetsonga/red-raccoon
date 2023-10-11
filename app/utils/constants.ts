@@ -228,3 +228,35 @@ export const categories = [
     ],
   },
 ];
+
+export const achievements = [
+  {
+    imageSrc: "/about/about-types.svg",
+    title: "Huge selection",
+    subtitle: "20 types. Hundreds of sizes.",
+  },
+  {
+    imageSrc: "/about/about-safe.svg",
+    title: "100% safe",
+    subtitle: "Thick metal. Quality control.",
+  },
+  {
+    imageSrc: "/about/about-production.svg",
+    title: "Large production",
+    subtitle: "CNC machines. 4 workshops per 1000 m2.",
+  },
+  {
+    imageSrc: "/about/about-payment.svg",
+    title: "Possibility of payment upon receipt in all cities of Canada",
+  },
+  {
+    imageSrc: "/about/about-engage.svg",
+    title: "Endlessly engaging object",
+    subtitle: "According to your sizes, your colors and your tasks.",
+  },
+  {
+    imageSrc: "/about/about-sellings.svg",
+    title: "Selling pergola from 2010",
+    subtitle: "Work with individuals and legal entities.",
+  },
+];
