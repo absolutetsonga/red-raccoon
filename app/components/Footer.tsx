@@ -8,15 +8,15 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className="w-full bg-footer bg-no-repeat bg-cover px-20 py-10 text-white gap-10">
-      <div className="flex flex-col gap-10">
-        <div className="flex flex-col lg:flex-row justify-between gap-10">
-          <p className="text-[#6B665E] max-w-[600px]">
+    <section className="flex justify-center w-full bg-footer bg-no-repeat bg-cover px-20 py-10 text-white gap-10">
+      <div className="flex flex-col gap-10 w-[1240px]">
+        <div className="flex flex-col lg:flex-row justify-between gap-6">
+          <p className="text-[#6B665E] max-w-[560px]">
             * Dear customers, if anyone to contact you as AlunoTec
             representatives, firstly please verify with AlunoTec via
             info@alunotec.com, beware deceived!
           </p>
-          <ul className="flex flex-row gap-4 flex-wrap">
+          <ul className="flex flex-row gap-4 flex-wrap cursor-pointer">
             <li>Home FAQ</li>
             <li> Reviews </li>
             <li> Our Products </li>
@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-center">
+        <p className="text-center text-[#6B665E]">
           Copyright © 2023 Industry Co.,Ltd. All Rights Reserved.
         </p>
       </div>

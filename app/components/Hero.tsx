@@ -6,7 +6,7 @@ import Button from "./Button";
 
 const Hero = () => {
   return (
-    <section className="flex items-center justify-center md:justify-end w-full min-h-screen md:pt-[68px] md:pr-[70px] p-4 text-center">
+    <section className="flex items-center justify-center md:justify-end w-full min-h-screen md:pt-[68px] md:pr-[70px] p-4 text-center" id="home">
       <Image
         src="/hero/background-hero.svg"
         alt=""

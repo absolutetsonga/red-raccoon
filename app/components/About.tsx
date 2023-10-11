@@ -12,7 +12,7 @@ const About = () => {
   const [number, setNumber] = useState<string>("");
 
   return (
-    <section className="relative flex justify-center w-full bg-about bg-no-repeat bg-cover p-10">
+    <section className="relative flex justify-center w-full bg-about bg-no-repeat bg-cover p-10" id="about-us">
       <div className="flex flex-col items-center md:items-baseline justify-center md:justify-normal sm:py-[130px] max-w-[1140px] text-white gap-10 z-10">
         <div className="flex flex-col gap-1">
           <h4 className="text-[40px] font-extralight leading-[188%]">
@@ -24,7 +24,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center lg:justify-start gap-10">
+        <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-20">
           {achievements.map((el) => {
             return (
               <div className="flex gap-4 w-[250px]" key={el.title}>

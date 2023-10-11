@@ -8,9 +8,11 @@ import { useState } from "react";
 import Button from "./Button";
 import Link from "next/link";
 
-// type ProductsProps = {};
+type ProductsProps = {
+  main_page: boolean;
+};
 
-const Products = () => {
+const Products = ({ main_page }: ProductsProps) => {
   const [productTabs, setProductTabs] = useState([
     { title: "PVC Retractble", active: false },
     { title: "Zip Screen", active: false },
@@ -23,7 +25,12 @@ const Products = () => {
   const activeTab = productTabs.find((tab) => tab.active === true);
 
   return (
-    <section className="flex justify-center w-full bg-[#1c2329]">
+    <section
+      className={`pt-[70px] flex justify-center w-full ${
+        main_page ? "bg-hero bg-no-repeat bg-cover" : "bg-[#1c2329]"
+      }`}
+      id="products"
+    >
       <div className="flex flex-col items-center justify-center w-[1140px] ">
         <div className="w-full flex flex-col gap-5 py-10 z-20">
           <div className="flex flex-col item-center justify-center text-center text-white">
