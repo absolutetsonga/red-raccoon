@@ -19,13 +19,13 @@ const ProductListElement = ({ product }: ProductListElementProps) => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   return (
-    <div className="relative w-[80%] md:w-auto flex flex-col md:flex-row lg:flex-col justify-between lg:justify-center gap-5 bg-white p-6 rounded-md ">
+    <div className="relative w-[80%] md:w-auto flex flex-col md:flex-row lg:flex-col justify-between lg:justify-center gap-2 lg:gap-5 bg-white p-6 rounded-md ">
       <Image
         src={product.imageSrc}
         width={295}
         height={220}
         alt={"Product Image"}
-        className="object-cover w-full md:max-w-[295px] max-h-[220px]"
+        className="object-cover w-full md:w-[295px] h-[220px]"
       />
 
       <div className="flex flex-col gap-6">
@@ -69,7 +69,7 @@ const ProductsList = ({ activeTab }: ProductsProps) => {
   const selectedCategory = categories.find((el) => el.category === activeTab);
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center mt-10 gap-10">
+    <section className="flex flex-col flex-wrap lg:flex-row items-center justify-center mt-10 gap-10">
       {selectedCategory?.products.map((product, index) => (
         <ProductListElement product={product} key={index} />
       ))}

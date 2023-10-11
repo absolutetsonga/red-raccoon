@@ -260,3 +260,84 @@ export const achievements = [
     subtitle: "Work with individuals and legal entities.",
   },
 ];
+
+export const testimonials = [
+  {
+    active: 0,
+    reviews: [
+      {
+        imageSrc: "/testimonials/testimonial-1.svg",
+        title:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit elit nunc donec elit iaculis arcu. Quis fe........",
+        author: "Wilson Bergson",
+        role: "Marketing manager",
+      },
+      {
+        imageSrc: "/testimonials/testimonial-2.svg",
+        title:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit elit nunc donec elit iaculis arcu. Quis fe........",
+        author: "Zaire Aminoff",
+        role: "Marketing manager",
+      },
+      {
+        imageSrc: "/testimonials/testimonial-3.svg",
+        title:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit elit nunc donec elit iaculis arcu. Quis fe........",
+        author: "Ryan Press",
+        role: "Marketing manager",
+      },
+    ],
+  },
+  {
+    active: 1,
+    reviews: [
+      {
+        imageSrc: "/testimonials/testimonial-3.svg",
+        title:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit elit nunc donec elit iaculis arcu. Quis fe........",
+        author: "Wilson Bergson",
+        role: "Marketing manager",
+      },
+      {
+        imageSrc: "/testimonials/testimonial-2.svg",
+        title:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit elit nunc donec elit iaculis arcu. Quis fe........",
+        author: "Zaire Aminoff",
+        role: "Marketing manager",
+      },
+      {
+        imageSrc: "/testimonials/testimonial-1.svg",
+        title:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit elit nunc donec elit iaculis arcu. Quis fe........",
+        author: "Ryan Press",
+        role: "Marketing manager",
+      },
+    ],
+  },
+  {
+    active: 2,
+    reviews: [
+      {
+        imageSrc: "/testimonials/testimonial-2.svg",
+        title:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit elit nunc donec elit iaculis arcu. Quis fe........",
+        author: "Wilson Bergson",
+        role: "Marketing manager",
+      },
+      {
+        imageSrc: "/testimonials/testimonial-1.svg",
+        title:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit elit nunc donec elit iaculis arcu. Quis fe........",
+        author: "Zaire Aminoff",
+        role: "Marketing manager",
+      },
+      {
+        imageSrc: "/testimonials/testimonial-3.svg",
+        title:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit elit nunc donec elit iaculis arcu. Quis fe........",
+        author: "Ryan Press",
+        role: "Marketing manager",
+      },
+    ],
+  },
+];

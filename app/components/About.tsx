@@ -15,23 +15,23 @@ const About = () => {
     <section className="relative flex justify-center w-full bg-about bg-no-repeat bg-cover p-10">
       <div className="flex flex-col items-center md:items-baseline justify-center md:justify-normal sm:py-[130px] max-w-[1140px] text-white gap-10 z-10">
         <div className="flex flex-col gap-1">
-          <h4 className="text-[34px] font-extralight leading-[188%]">
+          <h4 className="text-[40px] font-extralight leading-[188%]">
             About <span className="font-bold">Us</span>
           </h4>
-          <p className="text-[18px] font-light">
+          <p className="text-[22px] font-light">
             <span className="font-bold">421 people for 2022 year</span> chose
             Pergola Ontario
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <div className="flex flex-wrap justify-center lg:justify-start gap-10">
           {achievements.map((el) => {
             return (
               <div className="flex gap-4 w-[250px]" key={el.title}>
-                <Image src={el.imageSrc} alt="" width={46} height={46} />
+                <Image src={el.imageSrc} alt="" width={60} height={60} />
 
-                <div className="flex flex-col text-[13px]">
-                  <h4 className="font-bold text-[15px]">{el.title}</h4>
+                <div className="flex flex-col text-[14px]">
+                  <h4 className="font-black text-[18px]">{el.title}</h4>
                   {el.subtitle?.split(".").map((text) => (
                     <p key={text}>{text}</p>
                   ))}
@@ -43,11 +43,11 @@ const About = () => {
 
         <div className="flex flex-col gap-10">
           <div>
-            <h4 className="text-[18px]">
+            <h4 className="text-[22px]">
               Get a <span className="font-bold">free consultation</span> from
               our specialists.
             </h4>
-            <p className="text-[13px]">
+            <p className="text-[16px]">
               Technologist, manager, manager, foreman, logistician, installer,
               designer
             </p>

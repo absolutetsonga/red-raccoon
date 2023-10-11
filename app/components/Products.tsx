@@ -23,8 +23,8 @@ const Products = () => {
   const activeTab = productTabs.find((tab) => tab.active === true);
 
   return (
-    <section className="relative flex justify-center w-full bg-[#1c2329] px-6 py-3">
-      <div className="flex flex-col items-center justify-center w-[1140px]">
+    <section className="flex justify-center w-full bg-[#1c2329]">
+      <div className="flex flex-col items-center justify-center w-[1140px] ">
         <div className="w-full flex flex-col gap-5 py-10 z-20">
           <div className="flex flex-col item-center justify-center text-center text-white">
             <h2 className="font-extralight text-[44px] leading-[188%]">
