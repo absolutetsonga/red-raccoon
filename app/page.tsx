@@ -6,6 +6,7 @@ import {
   Testimonials,
   Footer,
 } from "./components";
+import Contacts from "./components/Contacts";
 
 export default function Home() {
   return (
@@ -13,9 +14,11 @@ export default function Home() {
       <Header />
 
       <Hero />
-      <Products />
+      <Products main_page={false} />
       <About />
       <Testimonials />
+      <Contacts />
+
       <Footer />
     </div>
   );
