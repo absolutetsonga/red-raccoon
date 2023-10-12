@@ -14,7 +14,7 @@ const Contacts = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center gap-10 max-w-[1140px] p-10 ">
+    <section className="flex flex-col items-center justify-center gap-10 max-w-[1140px] p-10" id="contacts">
       <div className="flex flex-col gap-6 text-center">
         <h3 className="text-4xl">Contacts</h3>
         <p>
