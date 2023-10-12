@@ -4,17 +4,14 @@ import React from "react";
 import Image from "next/image";
 
 import { Inter } from "next/font/google";
-import { testimonials } from "../utils/constants";
-import { useState } from "react";
 
 import Button from "./Button";
-import Arrow from "./Arrow";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Testimonials = () => {
   return (
-    <section className="flex justify-center w-full bg-[#1c2329] px-10 py-20">
+    <section className="flex justify-center w-full bg-[#1c2329] px-10 py-20" id="products">
       <div className="flex flex-col items-center justify-center w-[1140px] gap-20">
         <div className="w-full flex flex-col z-20 max-w-[800px]">
           <div className="flex flex-col item-center justify-center text-center text-white gap-6">

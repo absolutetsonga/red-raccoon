@@ -29,7 +29,7 @@ const Products = ({ main_page }: ProductsProps) => {
       className={`pt-[70px] flex justify-center w-full ${
         main_page ? "bg-hero bg-no-repeat bg-cover" : "bg-[#1c2329]"
       }`}
-      id="products"
+      id={main_page ? "home" : "products"}
     >
       <div className="flex flex-col items-center justify-center w-[1140px] ">
         <div className="w-full flex flex-col gap-5 py-10 z-20">
