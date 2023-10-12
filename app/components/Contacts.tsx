@@ -6,6 +6,8 @@ import React from "react";
 import Map from "./Map";
 
 const Contacts = () => {
+  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY);
+
   const containerStyle = {
     width: "400px",
     height: "400px",

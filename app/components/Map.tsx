@@ -5,24 +5,23 @@ type MapProps = {
   containerStyle: {
     width: string;
     height: string;
-  }
-}
-
+  };
+};
 
 const center = {
   lat: -3.745,
   lng: -38.523,
 };
 
-function Map({containerStyle}: MapProps) {
+function Map({ containerStyle }: MapProps) {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: process.env.GOOGLE_MAPS_KEY,
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY ?? "",
   });
 
   const [map, setMap] = React.useState(null);
 
-  const onLoad = React.useCallback(function callback(map) {
+  const onLoad = React.useCallback(function callback(map: any) {
     // This is just an example of getting and using the map instance!!! don't just blindly copy!
     const bounds = new window.google.maps.LatLngBounds(center);
     map.fitBounds(bounds);
@@ -30,7 +29,7 @@ function Map({containerStyle}: MapProps) {
     setMap(map);
   }, []);
 
-  const onUnmount = React.useCallback(function callback(map) {
+  const onUnmount = React.useCallback(function callback() {
     setMap(null);
   }, []);
 
