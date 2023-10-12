@@ -4,9 +4,9 @@
 
 .inset-center {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  transform: translate(-54%, -50%);
+  transform: translate(-50%, -53%);
 }
 
 *{

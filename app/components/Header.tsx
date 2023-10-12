@@ -14,11 +14,11 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 w-full flex justify-center h-[70px] lg:h-[100px] bg-white gap-20 z-30 px-10 py-1">
       <div className="relative flex flex-row items-center justify-between w-[1140px] h-full">
         <Image
-          src="/nav/logo.svg"
+          src="/logo.png"
           alt="Red Racoon Logo"
-          width={71}
-          height={71}
-          className="object-cover w-[60px] h-[60px] sm:w-[71px] sm:h-[71px]"
+          width={100}
+          height={100}
+          className="object-cover w-[100px] h-[100px]"
         />
 
         <div className="flex flex-row items-center justify-center gap-4 md:gap-[100px]">

@@ -10,17 +10,17 @@ type ModalProductProps = {
 
 const ModalProduct = ({ product, setToggle }: ModalProductProps) => {
   return (
-    <section className="inset-center sm:w-[600px] sm:h-[400px] md:w-[1000px] md:h-[609px] flex flex-col md:flex-row gap-10 mx-2 sm:mx-4 md:mx-6 lg:mx-10 p-2 sm:p-4 md:p-6 lg:p-10 pb-2 sm:pb-4 md:pb-6 lg:pb-16 z-10 text-[#313337] bg-white">
-      <div className="flex flex-col sm:flex-row md:flex-col gap-2 sm:gap-4 md:gap-6 md:w-1/2 justify-between">
+    <section className="inset-center sm:w-[600px] sm:h-[500px] md:w-[500px] md:h-[509px] lg:w-[900px] lg:h-[700px] flex flex-col lg:flex-row gap-4 lg:gap-10 mx-2 sm:mx-4 md:mx-6 lg:mx-10 p-2 sm:p-4 md:p-6 lg:p-10 pb-2 sm:pb-4 md:pb-6 lg:pb-16 z-10 text-[#313337] bg-white justify-between">
+      <div className="flex flex-col sm:flex-row lg:flex-col gap-2 sm:gap-4 md:gap-6 md:w-full lg:w-1/2 justify-between lg:justify-start">
         <Image
           src={product.imageSrc}
           alt=""
           width={270}
           height={300}
-          className="w-full sm:max-h-[150px] md:max-h-[300px] object-contain flex flex-1"
+          className="lg:w-full sm:max-h-[150px] md:max-h-[300px] object-cover flex flex-1"
         />
 
-        <div className="flex flex-col justify-between">
+        <div className="sm:w-1/2 md:w-full w-full flex flex-col justify-between">
           <div className="flex flex-col justify-between">
             <p>
               <span className="font-bold leading-[10px] text-[16px]">
@@ -45,11 +45,11 @@ const ModalProduct = ({ product, setToggle }: ModalProductProps) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 md:w-1/2 justify-between">
+      <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 lg:w-1/2 justify-between">
         <h3 className="text-[22.57px] font-extralight">{product.name}</h3>
 
         <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 lg:gap-9">
-          <div className="flex-col gap-2 sm:gap-4 hidden md:flex">
+          <div className="flex-col gap-2 sm:gap-4 hidden lg:flex">
             <h5 className="font-bold text-[14px]">Description:</h5>
             <p className="text-[14px] leading-[13.8px]">
               {product.description}
