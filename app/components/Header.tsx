@@ -63,8 +63,8 @@ const Header = () => {
 
           <div
             className={`${
-              toggle ? "opacity-100" : "opacity-0"
-            } sm:hidden absolute pointer-events-none flex flex-col top-20 -right-6 bg-white px-8 py-4 rounded-xl`}
+              toggle ? "opacity-100" : "opacity-0 pointer-events-none"
+            } sm:hidden absolute flex flex-col top-20 -right-6 bg-white px-8 py-4 rounded-xl`}
           >
             <Link href="#home">Home</Link>
             <Link href="#contacts">Contacts</Link>
